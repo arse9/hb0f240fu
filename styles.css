@@ -48,7 +48,6 @@ h1 {
 
 /* Formula Section Styling */
 .formula-section {
-    text-align: center;
     background-color: #1f1f1f;
     margin: 20px;
     padding: 15px;
@@ -65,7 +64,6 @@ h1 {
 
 /* Formula content that should drop down when clicked */
 .formula-content {
-    text-align: left;
     display: none;
     margin-top: 10px;
     color: #d3d3d3;
