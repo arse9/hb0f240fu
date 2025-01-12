@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Formulas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .formula-section {
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .formula-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor HTML -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <h1>Physics Formula Sheet</h1>
+
+    <!-- Formula sections with dropdowns -->
+    <div class="formula-section" id="Ekin" onclick="toggleContent('Ekin')">
+        <strong>E<sub>kin</sub>: <sup>1</sup>&#8260;<sub>2</sub>mv²</strong>
+        <div class="formula-content" id="contentEkin">
+            <p><strong>Formula:</strong> E<sub>kin</sub> = <sup>1</sup>&#8260;<sub>2</sub>mv²</p>
+            <p><strong>Explanation:</strong> Kinetic energy is the energy an object possesses due to its motion. It is directly proportional to the mass and the square of the object's velocity.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>m = mass in kg</li>
+                <li>v = velocity in m/s</li>
+            </ul>
+            <p><strong>Example:</strong> For a mass of 5 kg moving at a velocity of 10 m/s:</p>
+            <p><strong>Calculation:</strong> E<sub>kin</sub> = ½ × 5 × 10² = ½ × 5 × 100 = 250 J</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="Epot" onclick="toggleContent('Epot')">
+        <strong>E<sub>pot</sub>: mgh</strong>
+        <div class="formula-content" id="contentEpot">
+            <p><strong>Formula:</strong> E<sub>pot</sub> = mgh</p>
+            <p><strong>Explanation:</strong> Potential energy is the energy stored in an object due to its position or configuration. The potential energy is directly proportional to the mass, gravitational force, and height.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>m = mass in kg</li>
+                <li>g = gravitational acceleration in m/s² (9.82 m/s² in Denmark)</li>
+                <li>h = height in meters</li>
+            </ul>
+            <p><strong>Example:</strong> For a mass of 3 kg at a height of 10 m:</p>
+            <p><strong>Calculation:</strong> E<sub>pot</sub> = 3 × 9.82 × 10 = 294.6 J</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="Emech" onclick="toggleContent('Emech')">
+        <strong>E<sub>mech</sub>: E<sub>kin</sub> + E<sub>pot</sub></strong>
+        <div class="formula-content" id="contentEmech">
+            <p><strong>Formula:</strong> E<sub>mech</sub> = E<sub>kin</sub> + E<sub>pot</sub></p>
+            <p><strong>Explanation:</strong> The mechanical energy of a system is the sum of its kinetic and potential energy. It is a measure of the total energy in a system.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>E<sub>mech</sub> = Joules (J)</li>
+            </ul>
+            <p><strong>Example:</strong> If E<sub>kin</sub> = 250 J and E<sub>pot</sub> = 294.6 J:</p>
+            <p><strong>Calculation:</strong> E<sub>mech</sub> = 250 + 294.6 = 544.6 J</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="Etherm" onclick="toggleContent('Etherm')">
+        <strong>E<sub>therm</sub>: mcΔT</strong>
+        <div class="formula-content" id="contentEtherm">
+            <p><strong>Formula:</strong> E<sub>therm</sub> = mcΔT</p>
+            <p><strong>Explanation:</strong> The thermal energy change is the product of mass, specific heat capacity, and temperature change.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>m = mass in kg</li>
+                <li>c = specific heat capacity in J/(kg·°C)</li>
+                <li>ΔT = change in temperature in °C</li>
+            </ul>
+            <p><strong>Example:</strong> For a mass of 2 kg with a specific heat capacity of 4200 J/(kg·°C) and a temperature change of 5°C:</p>
+            <p><strong>Calculation:</strong> E<sub>therm</sub> = 2 × 4200 × 5 = 42000 J</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="DeltaT" onclick="toggleContent('DeltaT')">
+        <strong>ΔT = T<sub>2</sub> - T<sub>1</sub></strong>
+        <div class="formula-content" id="contentDeltaT">
+            <p><strong>Formula:</strong> ΔT = T<sub>2</sub> - T<sub>1</sub></p>
+            <p><strong>Explanation:</strong> The change in temperature is the difference between the final and initial temperatures.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>T<sub>2</sub>, T<sub>1</sub> = temperatures in °C</li>
+            </ul>
+            <p><strong>Example:</strong> If T<sub>2</sub> = 30°C and T<sub>1</sub> = 20°C:</p>
+            <p><strong>Calculation:</strong> ΔT = 30 - 20 = 10°C</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="Eelec" onclick="toggleContent('Eelec')">
+        <strong>E<sub>elec</sub>: V×I×Δt</strong>
+        <div class="formula-content" id="contentEelec">
+            <p><strong>Formula:</strong> E<sub>elec</sub> = V×I×Δt</p>
+            <p><strong>Explanation:</strong> The electric energy is the product of voltage, current, and time.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>V = voltage in volts (V)</li>
+                <li>I = current in amperes (A)</li>
+                <li>Δt = time in seconds (s)</li>
+            </ul>
+            <p><strong>Example:</strong> For a voltage of 12 V, current of 3 A, and time of 10 s:</p>
+            <p><strong>Calculation:</strong> E<sub>elec</sub> = 12 × 3 × 10 = 360 J</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="P" onclick="toggleContent('P')">
+        <strong>P: ΔE / Δt</strong>
+        <div class="formula-content" id="contentP">
+            <p><strong>Formula:</strong> P = ΔE / Δt</p>
+            <p><strong>Explanation:</strong> Power is the rate at which energy is transferred or converted.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>ΔE = energy in joules (J)</li>
+                <li>Δt = time in seconds (s)</li>
+            </ul>
+            <p><strong>Example:</strong> If ΔE = 500 J and Δt = 10 s:</p>
+            <p><strong>Calculation:</strong> P = 500 / 10 = 50 W</p>
+        </div>
+    </div>
+    
+    <div class="formula-section" id="n" onclick="toggleContent('n')">
+        <strong>η: E<sub>useful</sub> / E<sub>input</sub> × 100%</strong>
+        <div class="formula-content" id="contentn">
+            <p><strong>Formula:</strong> η = E<sub>useful</sub> / E<sub>input</sub> × 100%</p>
+            <p><strong>Explanation:</strong> Efficiency is the ratio of useful energy output to total energy input.</p>
+            <p><strong>Units:</strong></p>
+            <ul>
+                <li>E<sub>useful</sub>, E<sub>input</sub> = energy in joules (J)</li>
+            </ul>
+            <p><strong>Example:</strong> If the useful energy is 400 J and the input energy is 500 J:</p>
+            <p><strong>Calculation:</strong> η = (400 / 500) × 100% = 80%</p>
+        </div>
+    </div>
+    
+
+<!-- Unit Conversion Sections -->
+
+
+<div class="unit-conversion">
+<h2>Unit Conversions</h2>
+
+</div>
+
+<!-- Time Conversion Section -->
+<div class="formula-section" id="Time" onclick="toggleContent('Time')">
+    <strong>Time Conversion</strong>
+    <div class="formula-content" id="contentTime">
+        <!-- Hours to Seconds Conversion -->
+        <p><strong>Hours to Seconds:</strong></p>
+        <p>To convert <strong>2 hours</strong> to seconds, multiply <strong>2</strong> by <strong>3600</strong>.</p>
+        <p><em>Formula:</em> <code>seconds = hours × 3600</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>seconds = 2 × 3600 = <strong>7200 seconds</strong></pre>
+
+        <!-- Minutes to Seconds Conversion -->
+        <p><strong>Minutes to Seconds:</strong></p>
+        <p>To convert <strong>5 minutes</strong> to seconds, multiply <strong>5</strong> by <strong>60</strong>.</p>
+        <p><em>Formula:</em> <code>seconds = minutes × 60</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>seconds = 5 × 60 = <strong>300 seconds</strong></pre>
+    </div>
+</div>
+
+<!-- Distance Conversion Section -->
+<div class="formula-section" id="Distance" onclick="toggleContent('Distance')">
+    <strong>Distance Conversion</strong>
+    <div class="formula-content" id="contentDistance">
+        <!-- Kilometers to Meters Conversion -->
+        <p><strong>Kilometers to Meters:</strong></p>
+        <p>To convert <strong>3 kilometers</strong> to meters, multiply <strong>3</strong> by <strong>1000</strong>.</p>
+        <p><em>Formula:</em> <code>meters = kilometers × 1000</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>meters = 3 × 1000 = <strong>3000 meters</strong></pre>
+
+        <!-- Meters to Centimeters Conversion -->
+        <p><strong>Meters to Centimeters:</strong></p>
+        <p>To convert <strong>4 meters</strong> to centimeters, multiply <strong>4</strong> by <strong>100</strong>.</p>
+        <p><em>Formula:</em> <code>centimeters = meters × 100</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>centimeters = 4 × 100 = <strong>400 centimeters</strong></pre>
+    </div>
+</div>
+
+
+<div class="formula-section" id="Temperature" onclick="toggleContent('Temperature')">
+    <strong>Temperature Conversion</strong>
+    <div class="formula-content" id="contentTemperature">
+        <!-- Celsius to Fahrenheit Conversion -->
+        <p><strong>Celsius to Fahrenheit:</strong></p>
+        <p>To convert a temperature of <strong>25°C</strong> to Fahrenheit, multiply <strong>25</strong> by <strong>1.8</strong> and then add <strong>32</strong>.</p>
+        <p><em>Formula:</em> <code>F = (C × 1.8) + 32</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>F = (25 × 1.8) + 32 = 45 + 32 = <strong>77°F</strong></pre>
+        
+        <!-- Fahrenheit to Celsius Conversion -->
+        <p><strong>Fahrenheit to Celsius:</strong></p>
+        <p>To convert a temperature of <strong>77°F</strong> to Celsius, subtract <strong>32</strong> from <strong>77</strong>, and then divide by <strong>1.8</strong>.</p>
+        <p><em>Formula:</em> <code>C = (F - 32) ÷ 1.8</code></p>
+        <p><strong>Calculation:</strong></p>
+        <pre>C = (77 - 32) ÷ 1.8 = 45 ÷ 1.8 = <strong>25°C</strong></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+    <p>Made by Arseni Mahankov</p>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
