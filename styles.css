@@ -13,6 +13,10 @@ body {
     
 }
 
+.red-text {
+    color: red;
+}
+
 .cursor-dot {
     
     width: 5px;
